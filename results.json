@@ -1,0 +1,288 @@
+{
+  "excluded": [],
+  "failed": [],
+  "invalid": [],
+  "passed": [
+    {
+      "describe": "changeset/1",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/user_test.exs",
+      "line": 11,
+      "module": "Elixir.Exmeal.UserTest",
+      "test": "test changeset/1 when all params are valid, returns a valid changeset"
+    },
+    {
+      "describe": "Delete Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/delete_test.exs",
+      "line": 10,
+      "module": "Elixir.Exmeal.Meals.DeleteTest",
+      "test": "test Delete Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Delete Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/delete_test.exs",
+      "line": 31,
+      "module": "Elixir.Exmeal.Meals.DeleteTest",
+      "test": "test Delete Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "GetMealOrUser/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/helpers/get_meal_or_user_test.exs",
+      "line": 38,
+      "module": "Elixir.Exmeal.Helpers.GetMealOrUserTest",
+      "test": "test GetMealOrUser/2 when a valid id is given, returns the user"
+    },
+    {
+      "describe": "GetMealOrUser/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/helpers/get_meal_or_user_test.exs",
+      "line": 10,
+      "module": "Elixir.Exmeal.Helpers.GetMealOrUserTest",
+      "test": "test GetMealOrUser/2 when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "GetMealOrUser/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/helpers/get_meal_or_user_test.exs",
+      "line": 31,
+      "module": "Elixir.Exmeal.Helpers.GetMealOrUserTest",
+      "test": "test GetMealOrUser/2 when an invalid id is given, returns an error"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/helpers/get_meal_or_user_test.exs",
+      "line": 54,
+      "module": "Elixir.Exmeal.Helpers.GetMealOrUserTest",
+      "test": "test when an invalid user id is given, returns an error"
+    },
+    {
+      "describe": "changeset/1",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meal_test.exs",
+      "line": 12,
+      "module": "Elixir.Exmeal.MealTest",
+      "test": "test changeset/1 when all params are valid, returns a valid changeset"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/update_test.exs",
+      "line": 10,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/update_test.exs",
+      "line": 31,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Delete user",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/delete_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.DeleteTest",
+      "test": "test Delete user when a valid id is given, returns the user"
+    },
+    {
+      "describe": "Delete user",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/delete_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.Users.DeleteTest",
+      "test": "test Delete user when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/update_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.User.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/update_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.User.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 74,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test delete/2 when id not exist, return an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 129,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test get/2 when id exist, return the meal"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 64,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test delete/2 when id not exist, return an error"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 36,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 119,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test get/2 when id exist, return the meal"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 57,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test delete/2 when id exist, delete the meal"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 30,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 51,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test delete/2 when id exist, delete the user"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 89,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when id exist, update the meal"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 79,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when id exist, update the user"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test create/2 when all params are valid, creates a user"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 10,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test create/2 when all params are valid, creates a meal"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 116,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when not exist id, return an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 106,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when not exist id, return an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 154,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test get/2 when id not exist, return an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 141,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test get/2 when id not exist, return an error"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/meals_test.exs",
+      "line": 13,
+      "module": "Elixir.ExmealWeb.MealsViewTest",
+      "test": "test render create.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/users_view_test.exs",
+      "line": 12,
+      "module": "Elixir.ExmealWeb.UsersViewTest",
+      "test": "test render create.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/users_view_test.exs",
+      "line": 30,
+      "module": "Elixir.ExmealWeb.UsersViewTest",
+      "test": "test render user.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/meals_test.exs",
+      "line": 34,
+      "module": "Elixir.ExmealWeb.MealsViewTest",
+      "test": "test render meal.json"
+    },
+    {
+      "describe": "Create Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/create_test.exs",
+      "line": 10,
+      "module": "Elixir.Exmeal.Meals.CreateTest",
+      "test": "test Create Meal when all params are valid, returns the meal"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/error_view_test.exs",
+      "line": 7,
+      "module": "Elixir.ExmealWeb.ErrorViewTest",
+      "test": "test renders 404.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal_web/views/error_view_test.exs",
+      "line": 11,
+      "module": "Elixir.ExmealWeb.ErrorViewTest",
+      "test": "test renders 500.json"
+    },
+    {
+      "describe": "Create User",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/create_test.exs",
+      "line": 7,
+      "module": "Elixir.Exmeal.Users.CreateTest",
+      "test": "test Create User when all params are valid, returns the user"
+    },
+    {
+      "describe": "Create Meal",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/meals/create_test.exs",
+      "line": 28,
+      "module": "Elixir.Exmeal.Meals.CreateTest",
+      "test": "test Create Meal when there are invalid params, returns an error"
+    },
+    {
+      "describe": "Create User",
+      "file": "/home/bruno/Projects/Aprendendo_Elixir/ignite/desafios/ignite-elixir-t4-chapter4-relacionamento-entidades/test/exmeal/users/create_test.exs",
+      "line": 22,
+      "module": "Elixir.Exmeal.Users.CreateTest",
+      "test": "test Create User when there are invalid params, returns an error"
+    }
+  ],
+  "skiped": []
+}

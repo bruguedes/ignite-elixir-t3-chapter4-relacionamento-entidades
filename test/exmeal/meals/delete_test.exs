@@ -3,7 +3,8 @@ defmodule Exmeal.Meals.DeleteTest do
 
   import Exmeal.Factory
 
-  alias Exmeal.{Meal, User}
+  alias Exmeal.Meals.Schema.Meal
+  alias Exmeal.Users.Schema.User
 
   describe "Delete Meal" do
     test "when a valid id is given, returns the meal" do
@@ -11,17 +12,17 @@ defmodule Exmeal.Meals.DeleteTest do
 
       {:ok, %User{id: user_id}} = Exmeal.create_user(user_params)
 
-      params = build(:meals_params, %{user_id: user_id})
+      params = build(:meals_params, %{"user_id" => user_id})
 
       {:ok, %Meal{id: id}} = Exmeal.create_meal(params)
 
       response = Exmeal.delete_meal(id)
 
       assert {:ok,
-              %Exmeal.Meal{
-                calories: 20,
-                date: ~D[2001-05-02],
-                description: "Banana",
+              %Meal{
+                calories: 350,
+                date: ~U[2021-07-30 12:00:00Z],
+                description: "Frango com arroz integral",
                 id: ^id,
                 user_id: ^user_id
               }} = response
@@ -31,7 +32,7 @@ defmodule Exmeal.Meals.DeleteTest do
       id = "a6ef9b39-d638-4835-9ad7-dbe48d1257eb"
       response = Exmeal.delete_meal(id)
 
-      assert {:error, %Exmeal.Error{result: "Meal not found", status: :not_found}} = response
+      assert {:error, %Exmeal.Error{status: :not_found, error: "Meal not found"}} = response
     end
   end
 end

@@ -5,7 +5,7 @@ defmodule Exmeal.UserTest do
 
   alias Ecto.Changeset
 
-  alias Exmeal.User
+  alias Exmeal.Users.Schema.User
 
   describe "changeset/1" do
     test "when all params are valid, returns a valid changeset" do
@@ -16,8 +16,8 @@ defmodule Exmeal.UserTest do
       assert %Changeset{
                changes: %{
                  cpf: "12345678900",
-                 name: "Jp",
-                 email: "jp@banana.com"
+                 email: "bruno@mail.com",
+                 name: "Bruno Guedes"
                },
                valid?: true
              } = response

@@ -3,7 +3,7 @@ defmodule Exmeal.UsersControllerTest do
 
   import Exmeal.Factory
 
-  alias Exmeal.User
+  alias Exmeal.Users.Schema.User
 
   describe "create/2" do
     test "when all params are valid, creates a user", %{conn: conn} do
@@ -14,18 +14,16 @@ defmodule Exmeal.UsersControllerTest do
         |> post(Routes.users_path(conn, :create, params))
         |> json_response(:created)
 
-      %{"user" => %{"user" => %{"id" => id}}} = response
+      %{"user" => %{"id" => id}} = response
 
       assert %{
+               "message" => "User created!",
                "user" => %{
-                 "user" => %{
-                   "name" => "Jp",
-                   "email" => "jp@banana.com",
-                   "cpf" => "12345678900",
-                   "id" => ^id
-                 }
-               },
-               "message" => "User created!"
+                 "cpf" => "12345678900",
+                 "email" => "bruno@mail.com",
+                 "id" => ^id,
+                 "name" => "Bruno Guedes"
+               }
              } = response
     end
 
@@ -72,8 +70,8 @@ defmodule Exmeal.UsersControllerTest do
         |> json_response(:not_found)
 
       assert %{
-          "message" => "User not found"
-        } = response
+               "message" => "User not found"
+             } = response
     end
   end
 
@@ -84,7 +82,8 @@ defmodule Exmeal.UsersControllerTest do
       {:ok, %User{id: id}} = Exmeal.create_user(params)
 
       updated_params = %{
-        name: "Jp Alves"
+        "name" => "Jp Alves",
+        "email" => "jp@banana.com"
       }
 
       response =
@@ -92,7 +91,7 @@ defmodule Exmeal.UsersControllerTest do
         |> put(Routes.users_path(conn, :update, id, updated_params))
         |> json_response(:ok)
 
-        %{"user" => %{"id" => id}} = response
+      %{"user" => %{"id" => id}} = response
 
       assert %{
                "user" => %{
@@ -127,14 +126,14 @@ defmodule Exmeal.UsersControllerTest do
         |> get(Routes.users_path(conn, :show, id))
         |> json_response(:ok)
 
-        %{"user" => %{"id" => id}} = response
+      %{"user" => %{"id" => id}} = response
 
       assert %{
                "user" => %{
                  "cpf" => "12345678900",
-                 "email" => "jp@banana.com",
+                 "email" => "bruno@mail.com",
                  "id" => ^id,
-                 "name" => "Jp"
+                 "name" => "Bruno Guedes"
                }
              } = response
     end

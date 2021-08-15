@@ -3,7 +3,7 @@ defmodule Exmeal.User.UpdateTest do
 
   import Exmeal.Factory
 
-  alias Exmeal.User
+  alias Exmeal.Users.Schema.User
 
   describe "Update Meal" do
     test "when a valid id is given, returns the meal" do
@@ -11,13 +11,13 @@ defmodule Exmeal.User.UpdateTest do
 
       {:ok, %User{id: id}} = Exmeal.create_user(user_params)
 
-      response = Exmeal.update_user(%{"id" => id, "name" => "Jp Alves"})
+      response = Exmeal.update_user(%{"id" => id, "name" => "Bruno Silva"})
 
       assert {:ok,
-              %Exmeal.User{
+              %User{
                 cpf: "12345678900",
-                email: "jp@banana.com",
-                name: "Jp Alves",
+                email: "bruno@mail.com",
+                name: "Bruno Silva",
                 id: ^id
               }} = response
     end
@@ -26,7 +26,7 @@ defmodule Exmeal.User.UpdateTest do
       id = "a6ef9b39-d638-4835-9ad7-dbe48d1257eb"
       response = Exmeal.update_user(%{"id" => id})
 
-      assert {:error, %Exmeal.Error{result: "User not found", status: :not_found}} = response
+      assert {:error, %Exmeal.Error{error: "User not found", status: :not_found}} = response
     end
   end
 end

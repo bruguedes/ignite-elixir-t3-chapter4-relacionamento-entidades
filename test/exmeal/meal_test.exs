@@ -5,28 +5,30 @@ defmodule Exmeal.MealTest do
 
   alias Ecto.Changeset
 
-  alias Exmeal.Meal
+  alias Exmeal.Helpers.DateParse
+  alias Exmeal.Meals.Schema.Meal
 
   describe "changeset/1" do
     test "when all params are valid, returns a valid changeset" do
       user_params = build(:users_params)
 
-      Exmeal.create_user(user_params)
+      {:ok, %{id: user_id}} = Exmeal.create_user(user_params)
 
-      response =
+      {:ok, meal_input} =
         :meals_params
-        |>  build()
-        |> Meal.changeset()
+        |> build()
+        |> Map.put("user_id", user_id)
+        |> DateParse.parse()
 
       assert %Changeset{
                changes: %{
-                 description: "Banana",
-                 date: ~D[2001-05-02],
-                 calories: 20,
+                 description: "Frango com arroz integral",
+                 date: ~U[2021-07-30 12:00:00Z],
+                 calories: 350,
                  user_id: _user_id
                },
                valid?: true
-             } = response
+             } = Meal.changeset(meal_input)
     end
   end
 end

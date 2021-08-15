@@ -1,14 +1,15 @@
 defmodule Exmeal.Factory do
   use ExMachina.Ecto, repo: Exmeal.Repo
 
-  alias Exmeal.{Meal, User}
+  alias Exmeal.Meals.Schema.Meal
 
+  @spec meals_params_factory :: %{optional(<<_::32, _::_*8>>) => <<_::64, _::_*8>> | 350}
   def meals_params_factory do
     %{
-      description: "Banana",
-      date: "2001-05-02",
-      calories: "20",
-      user_id: "388fccf4-f3bb-4822-9817-973a62158d20"
+      "calories" => 350,
+      "date" => "2021-07-30",
+      "time" => "12:00:00",
+      "description" => "Frango com arroz integral"
     }
   end
 
@@ -17,25 +18,15 @@ defmodule Exmeal.Factory do
       description: "banana",
       date: "2001-05-02",
       calories: "2",
-      user_id: "388fccf4-f3bb-4822-9817-973a62158d20",
       id: "69961117-d966-4e2f-ac55-476d4f78ddfa"
     }
   end
 
   def users_params_factory do
     %{
-      name: "Jp",
-      email: "jp@banana.com",
+      name: "Bruno Guedes",
+      email: "bruno@mail.com",
       cpf: "12345678900"
-    }
-  end
-
-  def user_factory do
-    %User{
-      name: "Jp",
-      email: "jp@banana.com",
-      cpf: "12345678900",
-      id: "69961117-d966-4e2f-ac55-476d4f78dddf"
     }
   end
 end

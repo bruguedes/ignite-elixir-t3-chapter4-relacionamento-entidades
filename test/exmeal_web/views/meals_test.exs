@@ -5,7 +5,8 @@ defmodule ExmealWeb.MealsViewTest do
 
   import Exmeal.Factory
 
-  alias Exmeal.{Meal, User}
+  alias Exmeal.Meals.Schema.Meal
+  alias Exmeal.Users.Schema.User
 
   alias ExmealWeb.MealsView
 
@@ -14,20 +15,17 @@ defmodule ExmealWeb.MealsViewTest do
 
     {:ok, %User{id: user_id}} = Exmeal.create_user(user_params)
 
-    params = build(:meals_params, %{user_id: user_id})
+    params = build(:meals_params, %{"user_id" => user_id})
     {:ok, %Meal{id: id} = meal} = Exmeal.create_meal(params)
-
     response = render(MealsView, "create.json", meal: meal)
 
     assert %{
-             meals: %{
-               meal: %Meal{
-                 calories: 20,
-                 date: ~D[2001-05-02],
-                 description: "Banana",
-                 id: ^id,
-                 user_id: ^user_id
-               }
+             meal: %Meal{
+               calories: 350,
+               date: ~U[2021-07-30 12:00:00Z],
+               description: "Frango com arroz integral",
+               id: ^id,
+               user_id: ^user_id
              },
              message: "Meal created!"
            } = response
@@ -38,16 +36,16 @@ defmodule ExmealWeb.MealsViewTest do
 
     {:ok, %User{id: user_id}} = Exmeal.create_user(user_params)
 
-    params = build(:meals_params, %{user_id: user_id})
+    params = build(:meals_params, %{"user_id" => user_id})
     {:ok, %Meal{id: id} = meal} = Exmeal.create_meal(params)
 
     response = render(MealsView, "meal.json", meal: meal)
 
     assert %{
              meal: %Meal{
-               calories: 20,
-               date: ~D[2001-05-02],
-               description: "Banana",
+               calories: 350,
+               date: ~U[2021-07-30 12:00:00Z],
+               description: "Frango com arroz integral",
                id: ^id,
                user_id: ^user_id
              }

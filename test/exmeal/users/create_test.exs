@@ -11,10 +11,10 @@ defmodule Exmeal.Users.CreateTest do
 
       id = response.id
 
-      assert %Exmeal.User{
+      assert %Exmeal.Users.Schema.User{
                cpf: "12345678900",
-               email: "jp@banana.com",
-               name: "Jp",
+               email: "bruno@mail.com",
+               name: "Bruno Guedes",
                id: ^id
              } = response
     end
@@ -22,7 +22,7 @@ defmodule Exmeal.Users.CreateTest do
     test "when there are invalid params, returns an error" do
       params = %{
         cpf: 12_345_678_900,
-        email: "Jpbanana.com"
+        email: "bruno@mail.com"
       }
 
       response = Exmeal.create_user(params)

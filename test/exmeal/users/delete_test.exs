@@ -3,7 +3,7 @@ defmodule Exmeal.Users.DeleteTest do
 
   import Exmeal.Factory
 
-  alias Exmeal.User
+  alias Exmeal.Users.Schema.User
 
   describe "Delete user" do
     test "when a valid id is given, returns the user" do
@@ -14,10 +14,10 @@ defmodule Exmeal.Users.DeleteTest do
       response = Exmeal.delete_user(id)
 
       assert {:ok,
-              %Exmeal.User{
+              %User{
                 cpf: "12345678900",
-                email: "jp@banana.com",
-                name: "Jp",
+                email: "bruno@mail.com",
+                name: "Bruno Guedes",
                 id: ^id
               }} = response
     end
@@ -26,7 +26,7 @@ defmodule Exmeal.Users.DeleteTest do
       id = "a6ef9b39-d638-4835-9ad7-dbe48d1257eb"
       response = Exmeal.delete_user(id)
 
-      assert {:error, %Exmeal.Error{result: "User not found", status: :not_found}} = response
+      assert {:error, %Exmeal.Error{status: :not_found, error: "User not found"}} = response
     end
   end
 end
