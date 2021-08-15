@@ -8,6 +8,7 @@ Agora a aplicação deve possuir uma tabela `users` e esses usuários devem poss
 a tabela `meals` (já feita no primeiro desafio do capítulo) onde cada usuário tem a sua própria lista de refeições diárias.
 
 ROTAS PARA USUÁRIO
+
     Criando usuário:
         POST : http://localhost:4000/api/users
         {
@@ -30,6 +31,7 @@ ROTAS PARA USUÁRIO
         DELETE : http://localhost:4000/api/users/:id
 
 ROTAS PARA REFEIÇÕES
+
     Criando usuário:
         POST : http://localhost:4000/api/meals
         {
